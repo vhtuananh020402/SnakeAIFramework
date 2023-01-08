@@ -21,18 +21,20 @@ public class SnakesUIMain {
      * @throws IOException  FileWriter handler
      */
     public static void main(String[] args) throws InterruptedException, IOException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
-        if (args.length < 2) {
-            System.err.println("You must provide two classes implementing the Bot interface.");
-            System.exit(1);
-        }
+//        if (args.length < 2) {
+//            System.err.println("You must provide two classes implementing the Bot interface.");
+//            System.exit(1);
+//        }
 
         ArrayList<Class<? extends Bot>> bots = new ArrayList<>();
         BotLoader loader = new BotLoader();
 
-        bots.add(loader.getBotClass(args[0]));
-        bots.add(loader.getBotClass(args[1]));
+        String bot01 = "tuna.tunaBot";
+        String bot02 = "v_smirnov.V_smirnov";
+        bots.add(loader.getBotClass(bot01));
+        bots.add(loader.getBotClass(bot02));
 
-        start_tournament_n_times(6, bots);
+        start_tournament_n_times(1, bots);
     }
 
     /**

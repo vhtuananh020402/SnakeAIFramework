@@ -107,6 +107,13 @@ public class SnakeCanvas extends JPanel {
 		g.setColor(backgroundColor);
 		g.fillRect(CELL_SIZE, CELL_SIZE, renderSize.width - 2 * CELL_SIZE, renderSize.height - 2 * CELL_SIZE);
 
+		// drawing a grid
+		g.setColor(new Color(255, 255, 255));
+		for (int i = 0; i < (renderSize.height)/CELL_SIZE; ++i) {
+			g.drawLine(i*CELL_SIZE , CELL_SIZE, i*CELL_SIZE, renderSize.height - CELL_SIZE);		// draw all vertical parallel lines
+			g.drawLine(CELL_SIZE, i*CELL_SIZE, renderSize.width - CELL_SIZE,i*CELL_SIZE);
+		}
+
 		fillCellWithPad(g, game.appleCoordinate, appleColor, ApplePad);
 
 		Iterator<Coordinate> it = game.snake0.body.stream().iterator();

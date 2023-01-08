@@ -26,4 +26,5 @@ public enum Direction {
         this.dy = dy;
         this.v = new Coordinate(dx, dy);
     }
+
 }
