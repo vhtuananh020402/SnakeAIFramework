@@ -1,4 +1,4 @@
-package a_zhuchkov;
+package Bot.a_zhuchkov;
 
 import snakes.Bot;
 import snakes.Coordinate;

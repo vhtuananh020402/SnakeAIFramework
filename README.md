@@ -197,7 +197,7 @@ else return validMoves[0];
 
 ### Final Code
 
-So here is what we came up with, this is included with the repository, you find it as *johndoe.SampleBot*.
+So here is what we came up with, this is included with the repository, you find it as *Bot.johndoe.SampleBot*.
 
 ```java
 package student
@@ -252,7 +252,7 @@ You must pass two bots, in order for the game to work, those could be the same.
 
 Let's use your newly written bot with the one, provided by us. Even though, they actually are the same.
 
-`java snakes.SnakesUIMain johndoe.SampleBot student.MyBot`
+`java snakes.SnakesUIMain Bot.johndoe.SampleBot student.MyBot`
 
 *Note: this command is executed in the folder with already compiled .class files, not in the src directory. **You do not need** to worry about this if you are using an IDE, such as IntelliJ Idea.*
 

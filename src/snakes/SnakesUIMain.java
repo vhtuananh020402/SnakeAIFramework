@@ -1,5 +1,9 @@
 package snakes;
 
+import GUI.ChooseBotMenu;
+import GUI.GameMainMenu;
+import GUI.STATE;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,16 +14,22 @@ import java.util.ArrayList;
  * Implements tournament of the snake game with several rounds
  */
 public class SnakesUIMain {
+
+    private static STATE gameState;
     private static final String LOG_DIRECTORY_PATH = "logs";
     private static FileWriter results_fw;
     private static int[][] total_results_table;
 
+    public static STATE setState(STATE otherState) { return otherState; }
+
+
     /**
      * UI Entry point
-     * @param args Two classes implementing the Bot interface
+     *
      * @throws InterruptedException Threads handler
-     * @throws IOException  FileWriter handler
+     * @throws IOException          FileWriter handler
      */
+
     public static void main(String[] args) throws InterruptedException, IOException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
 //        if (args.length < 2) {
 //            System.err.println("You must provide two classes implementing the Bot interface.");
@@ -29,12 +39,13 @@ public class SnakesUIMain {
         ArrayList<Class<? extends Bot>> bots = new ArrayList<>();
         BotLoader loader = new BotLoader();
 
-        String bot01 = "tuna.tunaBot";
-        String bot02 = "v_smirnov.V_smirnov";
+        String bot01 = "Bot.tuna.tunaBot";
+        String bot02 = "Bot.v_smirnov.V_smirnov";
         bots.add(loader.getBotClass(bot01));
         bots.add(loader.getBotClass(bot02));
 
-        start_tournament_n_times(1, bots);
+        start_tournament_n_times(2, bots);
+
     }
 
     /**

@@ -1,4 +1,4 @@
-package v_smirnov;
+package Bot.v_smirnov;
 
 import snakes.Bot;
 import snakes.Coordinate;

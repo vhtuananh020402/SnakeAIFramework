@@ -219,3 +219,5 @@ public class SnakeCanvas extends JPanel {
 		g.fillRect(x - width, y, width, height);
 	}
 }
+
+

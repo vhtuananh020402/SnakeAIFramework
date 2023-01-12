@@ -1,4 +1,4 @@
-package tuna;
+package Bot.tuna;
 
 import snakes.Bot;
 import snakes.Coordinate;
@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Random;
 
-public class tunaBotv2 implements Bot {
+public class tunaBot implements Bot {
     private final Random rnd = new Random();
     private static final Direction[] DIRECTIONS = new Direction[] {Direction.UP, Direction.DOWN, Direction.LEFT, Direction.RIGHT};
 
@@ -44,17 +44,17 @@ public class tunaBotv2 implements Bot {
         int minimum = 0;
         int maximum = notLosing.length - 1;
         if (notLosing.length > 0){
-//            for (int i = 0; i < notLosing.length; ++i) {
-//                //debug
-//               System.out.print(i + " --- " + notLosing[i].dx + ", " + notLosing[i].dy + "\n");
-//            }
+            for (int i = 0; i < notLosing.length; ++i) {
+                //debug
+               System.out.print(i + " --- " + notLosing[i].dx + ", " + notLosing[i].dy + "\n");
+               System.out.print(afterHead.toString() + "\n");
+            }
 
-            // new for randomness of the indexes of notLosing Direction array
+            // new implementation for randomness of the indexes of notLosing Direction array
+//            int range = maximum - minimum + 1;
+//            int randomNum =  rnd.nextInt(range) + minimum;
 
-            int range = maximum - minimum + 1;
-            int randomNum =  rnd.nextInt(range) + minimum;
-
-            return notLosing[randomNum];
+            return notLosing[0];
         }
         else
             return validMoves[0];
