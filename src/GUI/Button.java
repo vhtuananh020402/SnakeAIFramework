@@ -50,8 +50,9 @@ public class Button extends JButton {
     public Button() {
         setBorder(new EmptyBorder(10, 12, 15, 12));
         setContentAreaFilled(false);
-        setBackground(new Color(255, 255, 255));
-        setForeground(new Color(80, 80, 80));
+//        setBackground(new Color(255, 255, 255));
+        setBackground(new Color(179, 230, 85));
+        setForeground(new Color(80, 80, 80));       // z.B: text
         rippleEffect.setRippleColor(new Color(220, 220, 220));
     }
 
